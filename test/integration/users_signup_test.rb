@@ -36,5 +36,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     # 登録後、Welcomeメッセージを表示するためflashは空ではない
     assert_not flash.empty?
+    assert is_logged_in?
   end
 end
