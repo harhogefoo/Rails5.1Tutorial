@@ -68,7 +68,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   host = 'vast-everglades-78426.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  ActionMailer::base.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     address: 'smtp.sendgrid.net',
     port: '587',
     authnetication: :plain,
